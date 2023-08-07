@@ -12,8 +12,8 @@ nohup python3 -m http.server --directory /data2/shared/nvidia $port > tmp.log 2>
 
 export TENSORRT_URL=http://$ip:$port/TensorRT-8.2.3.0.Linux.x86_64-gnu.cuda-11.4.cudnn8.2.tar.gz
 export TENSORRT_VERSION=8.2.3.0
-export CUDA_INT=113
-export TAG=ubuntu20.04-cuda11.3
+export CUDA_INT=10.2
+export TAG=ubuntu18.04-cuda10.2
 
 # build docker image
 docker build ./docker/Base/ -t openmmlab/mmdeploy:$TAG \
